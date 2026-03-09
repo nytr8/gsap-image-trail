@@ -20,7 +20,7 @@ const ImageTrailEffect = () => {
     const container = containerRef.current;
     if (!container) return;
 
-    const threshold = window.innerWidth < 900 ? 90 : 200;
+    const threshold = window.innerWidth < 900 ? 50 : 100;
 
     const handleMouseMove = (e) => {
       const dx = e.clientX - lastPosRef.current.x;
@@ -32,8 +32,8 @@ const ImageTrailEffect = () => {
         img.src = images[imageIndexRef.current];
         img.style.cssText = `
           position: absolute;
-          width: 450px;
-          height: 800px;
+          width: 150px;
+          height: 250px;
           object-fit: cover;
           border-radius: 8px;
           pointer-events: none;
